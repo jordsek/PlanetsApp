@@ -8,3 +8,5 @@
 *The code is appropriately documented
 *Only standard Apple IOS framework is used and no third party frameworks.
 *The app is Appropriately unit tested
+
+**Screen short of the first screen display.
