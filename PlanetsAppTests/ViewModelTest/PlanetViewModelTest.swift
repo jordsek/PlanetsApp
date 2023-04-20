@@ -8,6 +8,7 @@
 import XCTest
 @testable import PlanetsApp
 import CoreData
+@MainActor
 final class PlanetViewModelTest: XCTestCase {
 
     override func setUpWithError() throws {
@@ -18,16 +19,55 @@ final class PlanetViewModelTest: XCTestCase {
         
     }
 
-    func testGetPlanet_When_data_isCorrect() async{
+    func testGetPlanet_When_data_isCorrect() async {
         let fakePlanetRepository = FakePlanetRepository()
-        let planetViewModel =   await PlanetListViewModel(repository: fakePlanetRepository)
+        let fakeViewmodel =   await FakeViewModel(repository: fakePlanetRepository)
         
+        await fakeViewmodel.getPlanetList(urlString: "PlanetSampleTestFile")
+        let planetArray = fakeViewmodel.planetList
+        XCTAssertNotNil(planetArray)
+       
     }
-    func testPerformanceExample() throws {
-        // This is an example of a performance test case.
-        self.measure {
-            // Put the code you want to measure the time of here.
-        }
+    
+    //when url is incorrect, it will return immediately, no data in PlanetArray
+    func test_getPlanetList_When_Url_isNotGiven() async {
+        
+
+        let fakePlanetRepository = FakePlanetRepository()
+        let fakeViewmodel =   await FakeViewModel(repository: fakePlanetRepository)
+        
+        await fakeViewmodel.getPlanetList(urlString: "")
+        let planetArray = fakeViewmodel.planetList
+        let localError =  fakeViewmodel.customError
+        XCTAssertEqual(planetArray.count,0)
+
     }
+    
+    func testGetPlanetList_when_APIFails() async{
+        let fakePlanetRepository = FakePlanetRepository()
+        let fakeViewmodel =   await FakeViewModel(repository: fakePlanetRepository)
+
+        XCTAssertNotNil(fakeViewmodel)
+
+        await fakeViewmodel.getPlanetList(urlString: "PlanetSampleTestFile")
+
+        let planetArray = fakeViewmodel.planetList
+        XCTAssertEqual(planetArray.count, 0)
+    }
+    
+    func testGetEmployeeList_When_URL_is_Incorrect() async{
+        let fakePlanetRepository = FakePlanetRepository()
+        let fakeViewmodel =   await FakeViewModel(repository: fakePlanetRepository)
+
+        XCTAssertNotNil(fakeViewmodel)
+
+        await fakeViewmodel.getPlanetList(urlString: "CharacterSampleTestFileWrongURL")
+
+        let planetArray = fakeViewmodel.planetList
+        XCTAssertEqual(planetArray.count, 0)
+        
+
+    }
+
 
 }

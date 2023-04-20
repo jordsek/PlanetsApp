@@ -26,6 +26,7 @@
 		03A3290329EECA9B008CA077 /* PlanetRepostory.swift in Sources */ = {isa = PBXBuildFile; fileRef = 03A3290229EECA9B008CA077 /* PlanetRepostory.swift */; };
 		03A3290529EECB13008CA077 /* PlanetRepositoryImplementation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 03A3290429EECB13008CA077 /* PlanetRepositoryImplementation.swift */; };
 		03A3290729EED59D008CA077 /* PlanetListViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 03A3290629EED59D008CA077 /* PlanetListViewModel.swift */; };
+		03B596F529F172E600DDC84C /* FakeViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 03B596F429F172E600DDC84C /* FakeViewModel.swift */; };
 		03CE6C9829F03327008C1B0D /* PlanetListCoredataRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = 03CE6C9729F03327008C1B0D /* PlanetListCoredataRepository.swift */; };
 		03CE6C9C29F0342D008C1B0D /* PlanetListCoreDataRepositoryImplementation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 03CE6C9B29F0342D008C1B0D /* PlanetListCoreDataRepositoryImplementation.swift */; };
 		03CE6C9F29F03815008C1B0D /* CoreDataError.swift in Sources */ = {isa = PBXBuildFile; fileRef = 03CE6C9E29F03815008C1B0D /* CoreDataError.swift */; };
@@ -81,6 +82,7 @@
 		03A3290229EECA9B008CA077 /* PlanetRepostory.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlanetRepostory.swift; sourceTree = "<group>"; };
 		03A3290429EECB13008CA077 /* PlanetRepositoryImplementation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlanetRepositoryImplementation.swift; sourceTree = "<group>"; };
 		03A3290629EED59D008CA077 /* PlanetListViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlanetListViewModel.swift; sourceTree = "<group>"; };
+		03B596F429F172E600DDC84C /* FakeViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FakeViewModel.swift; sourceTree = "<group>"; };
 		03CE6C9729F03327008C1B0D /* PlanetListCoredataRepository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlanetListCoredataRepository.swift; sourceTree = "<group>"; };
 		03CE6C9B29F0342D008C1B0D /* PlanetListCoreDataRepositoryImplementation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlanetListCoreDataRepositoryImplementation.swift; sourceTree = "<group>"; };
 		03CE6C9E29F03815008C1B0D /* CoreDataError.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoreDataError.swift; sourceTree = "<group>"; };
@@ -278,6 +280,7 @@
 			children = (
 				03A328D629EEC16B008CA077 /* PlanetsAppTests.swift */,
 				03CE6CB929F05E91008C1B0D /* PlanetViewModelTest.swift */,
+				03B596F429F172E600DDC84C /* FakeViewModel.swift */,
 			);
 			path = ViewModelTest;
 			sourceTree = "<group>";
@@ -441,6 +444,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				03CE6CBA29F05E91008C1B0D /* PlanetViewModelTest.swift in Sources */,
+				03B596F529F172E600DDC84C /* FakeViewModel.swift in Sources */,
 				03CE6CA829F048D7008C1B0D /* NetworkManagerTest.swift in Sources */,
 				03CE6CB329F05085008C1B0D /* PlanetRepositoryTests.swift in Sources */,
 				03CE6CB529F0523E008C1B0D /* FakePlanetRepository.swift in Sources */,
