@@ -1,7 +1,7 @@
 # PlanetsApp
 **Name of the app** PlanetAPP
 
-##The following required functionality are completed
+##This app demonstrates the planets fetched from a network call and stored in core data before they are displayed to the user. It is programmed in SWiftUI, using MVVM architecture, with are repository layer, the App is unit tested, TDD tested and BDD tested. A newtwork call is made using https://swapi.dev/api/planets/ to fetch the data. 
 
 *The application has a screen which displays a list of planets from the first page of the planet data.
 
