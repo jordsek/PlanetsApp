@@ -34,3 +34,7 @@ The API for the planets is: https://swapi.dev/api/planets/
 *Add a navigation link to an extra detail view to display details of each Planet
 
 *Add a search bar to enable a user to make search of a particular planet.
+
+![Screenshot 2023-07-31 at 16 56 43](https://github.com/jordsek/PlanetsApp/assets/73316853/bd5a4369-c90b-47f7-807e-3de2e0ead288)
+
+
